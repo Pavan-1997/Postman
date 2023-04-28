@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "a26758e3-44ac-47b9-bb00-5238e65cf308",
+		"name": "Test Personal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25650893"
+	},
+	"item": [
+		{
+			"name": "Send a JSON data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Pavan\",\r\n    \"lastName\": \"Raj\",\r\n    \"contactDetails\": {\r\n        \"email\": \"spavanrspavanraj97@gmail.com\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "httpbin.org/anything",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"anything"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Google french",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "sometoken",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "fr",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "www.google.com",
+					"host": [
+						"www",
+						"google",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

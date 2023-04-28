@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "2c21e1c3-78dc-49db-aeae-339020e4df29",
+		"name": "GIPHY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25650893"
+	},
+	"item": [
+		{
+			"name": "Search endpoint",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get single gif endpoint",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "e8oGhlrK3FLFR0vAsFY7eN62u73BUB0o",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.giphy.com/v1/gifs/:gifId",
+					"host": [
+						"api",
+						"giphy",
+						"com"
+					],
+					"path": [
+						"v1",
+						"gifs",
+						":gifId"
+					],
+					"variable": [
+						{
+							"key": "gifId",
+							"value": "xTiTnwj1LUAw0RAfiU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload gif",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "e8oGhlrK3FLFR0vAsFY7eN62u73BUB0o",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/pavan/Downloads/CAT.gif"
+						},
+						{
+							"key": "tags",
+							"value": "postman,pavan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "upload.giphy.com/v1/gifs",
+					"host": [
+						"upload",
+						"giphy",
+						"com"
+					],
+					"path": [
+						"v1",
+						"gifs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
